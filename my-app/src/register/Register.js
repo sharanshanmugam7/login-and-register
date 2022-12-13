@@ -4,7 +4,10 @@ import akkaal from './akkaal.png'
 import annan from './annan.png'
 import friday from './friday.png'
 import '../login/Login.css'
-export default function Register() {
+import '../login/Login'
+import { useNavigate } from 'react-router-dom'
+ function Register() {
+    const navigate = useNavigate();
   return (
     <div className = "login">
       <div className="main">
@@ -24,20 +27,21 @@ export default function Register() {
               <label htmlfor="E-mail">E-mail<br/> </label> 
               <input style={{color:'lavender'}} type="text" className="box" placeholder="E-mail" name="E-mail" id="E-mail" />
               <label htmlfor="pass">Create Password<br/></label>
-              <input style={{color:'lavender'}} type="text" className="box" placeholder="Create Password" id="pass"></input>
+              <input style={{color:'lavender'}} type="password" className="box" placeholder="Password" id="pass"></input>
               <label htmlfor="dob">Date of Birth<br/></label>
               <input style={{color:'lavender'}} type="date" className="box" id="dob"></input>
             </div>
           </form>
           </div>
           <div className="term">
-            <p> By clicking ‘Become a member’, I agree to the H&M Membership Terms and conditions.<br/><br/>
-            To give you the full membership experience, we will process your personal data in accordance with the H&M's Privacy Notice.
+            <p> By clicking ‘Become a member’, I agree to the H&M Membership <strong className="T">Terms and conditions.</strong><br/><br/>
+            To give you the full membership experience, we will process your personal data in accordance with the H&M's <strong className="T">Privacy Notice.</strong>
             </p>
-            <div className="agree"><p>Become a Member</p></div>
+            <div className="agree"><p onClick={() => navigate("/")}>Become a Member</p></div>
           </div>
       </div>
     </div>
 
   )
 }
+export default Register;

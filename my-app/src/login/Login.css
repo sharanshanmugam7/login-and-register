@@ -54,6 +54,7 @@
     top: 15%;
     bottom: 5%;
     background: black;
+    border-radius: 3%;
     font-family: 'Inter', sans-serif;
     letter-spacing: 0.5px;
     word-spacing: 2%;
@@ -83,7 +84,7 @@
     position: absolute;
     color: aliceblue;
     font-size:small;
-    width: 45%;
+    width: 50%;
     padding-top: 5%;
 }
 .box
@@ -100,6 +101,7 @@
 {
     font-size: medium;
     color:rgba(30, 155, 225, 1);
+    padding-top: 2%;
 }
 .forget
 {
@@ -109,8 +111,7 @@
 .bm
 {
     display : flex;
-    color: rgba(30, 155, 225, 1)
-    ;
+    color:white;
     padding: 15% 15%;
     flex-direction: column;
     justify-content: left;
@@ -149,5 +150,8 @@
     line-height: 1.5em;
     font-size:large;
     font-weight: 500;
-
+}
+.T
+{
+    color: rgba(30, 155, 125, 1);
 }

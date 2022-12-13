@@ -4,7 +4,10 @@ import akkaal from './akkaal.png'
 import annan from './annan.png'
 import friday from './friday.png'
 import '../login/Login.css'
-export default function Login() {
+import '../register/Register'
+import { useNavigate } from 'react-router-dom'
+ function Login() {
+    const navigate = useNavigate();
   return (
     <div className = "login">
         <div className="main">
@@ -24,7 +27,7 @@ export default function Login() {
                         <label htmlfor="E-mail">E-mail<br/> </label> 
                         <input style={{color:'lavender'}} type="text" className="box" placeholder="E-mail" name="E-mail" id="E-mail" />
                         <label htmlfor="pass"> Password<br/></label>
-                        <input style={{color:'lavender'}} type="text" className="box" placeholder="Password" id="pass"></input>
+                        <input style={{color:'lavender'}} type="password" className="box" placeholder="Password" id="pass"></input>
                             <div className="sin"> <p> Sign in</p></div>
                             <div className="forget"> <p> Forgot password</p></div>
                     </div>
@@ -35,12 +38,13 @@ export default function Login() {
                 BY GIVING US YOUR DETAILS, PURCHASING IN ALAN.COM WILL BE 
                 FASTER AND AN ENJOYABLE EXPERIENCE.
                 </div>
-                    <div className="sin"> <p>Become a Member</p></div>
+                    <div className="sin"> <p onClick={() => navigate("/Register")}>Become a Member</p></div>
             </div>
         </div>
     </div>
   )
 }
+export default Login;
             
            /* <br/>
             <input type="submit" value="Forget password?" />
